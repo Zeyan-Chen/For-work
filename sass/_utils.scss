@@ -1,0 +1,67 @@
+// 變數
+$bg-primary: #282b32;
+$font-color-primary: rgba(255, 255, 255, .75);
+$title-color-primary: #fff;
+$title-color-second: rgba(0, 0, 0, .75);
+$font-color-second: #63c6a3;
+
+
+
+$primary: #999;
+$second-color: #55af8f;
+$black-color: #3a434c;
+$time-line-primary-color: #e1e1e1;
+$fontSize: 14px;
+$baseSize: 12px;
+$baseLineSize: 10px;
+$sizeLevel: 4px;
+$paddingLevel: 1.2;
+
+// 算字體函式
+@function font($level: 0) {
+	@if $level < 0 {
+		$level: 0;
+	}
+	@return $baseSize + $sizeLevel * round($level);
+}
+	// 12px + 4px * 1(四捨五入)
+
+@function rhythm($size) {
+	@return ceil($size * $paddingLevel / $baseLineSize) * $baseLineSize;
+	// ceil(16px * 1.2 / 10px) * 10px = 20px
+	// ceil 就是無條件進位 >> ceil(2.0) = 2 >> ceil(2.1) = 3 >> ceil(2.6) = 3
+}
+
+@function line($count: 1, $baseLineHeight: 10px) {
+	@return $baseLineHeight * $count;
+}
+
+@mixin font($level: 1, $line-height: auto) {
+	$size: font($level); // 16px
+	$line: rhythm($size); // 20px
+
+	font-size: $size;
+	// 如果沒給lineheight或給的lineheight比我算的小就用我的line 
+	@if ($line-height == auto or $line-height < $line) {
+		line-height: $line;
+	} @else {
+		line-height: $line-height;
+	}
+}
+// 算字體函式 end
+
+// 置中 transform
+@mixin transform_center() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin posab_center() {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}

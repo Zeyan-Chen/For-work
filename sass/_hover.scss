@@ -1,0 +1,67 @@
+.nav-item .item, .line-content .item {
+    /*text-transform: lowercase;*/
+    /*字體改變*/
+    text-decoration: none;
+}
+
+.item {
+    outline: none;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, .75);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition: all ease-in-out 300ms;
+    position: relative;
+    z-index: 10;
+    height: calc(100% / 6);
+    text-decoration: none;
+}
+
+
+.item span::before,
+.item span::after {
+    position: absolute;
+    top: 50%;
+    font-size: 60%;
+    transform: translateY(-50%);
+}
+
+.item span::after {
+    content: '>';
+    padding-left: .3em;
+}
+
+.item span::before {
+    content: '<';
+    margin-left: -12px;
+}
+
+.item span::before,
+.item span::after {
+    transition: transform .2s ease-in-out .1s, opacity .2s ease-in-out .1s;
+    opacity: 0;
+}
+
+.item span::before {
+    transform: translate(-100%, -100%);
+}
+
+.item span::after {
+    transform: translate(100%, 100%);
+}
+
+// .item:focus span::before,
+// .item:focus span::after,
+.item:hover span::before,
+.item:hover span::after {
+    transform: translate(0, -50%);
+    opacity: 1;
+    color: $second-color;
+}
+// .nav-item .item:focus,
+.nav-item .item:hover {
+    color: $second-color;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .75);
+}
