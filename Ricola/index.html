@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ricola</title>
+	<!-- about SEO -->
+	<meta name="description" content="Ricola by Digital+ 數碼數位 行動自媒體 iApp-Media from Taipei App-Version" />
+	<meta name="keywords" content="Ricola,event,抽獎,事件,活動,iApp,App,Digital+,數碼數位,iApp,iApp-Media,iMag,Web App,O2O,SoLoMo,SMO"
+	/>
+	<!-- for apple (PS:iphone5 去除width=device-width)
+         1.viewport符合device真正寬度,scale畫面倍率,scalable是否可縮放
+         2-3.將Web Page儲存為home screen icon時的圖示
+         4.設定載入頁面時 loading 圖片
+         5.隱藏底部 iPhone button bar，看起來更像 iPhone App
+         6.更改 status bar 樣式    
+     -->
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="apple-touch-icon-precomposed" href="img/icon.png" />
+	<link rel="apple-touch-icon" href="img/114.png" />
+	<link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)">
+	<link rel="apple-touch-startup-image" href="startup-iphone-retina-portrait.png" media="(device-width:320px) and (-webkit-min-device-pixel-ratio: 2)">
+	<link rel="apple-touch-startup-image" href="startup-iphone-5-portrait.png" media="(device-width:320px) and (device-height:568px) and (-webkit-min-device-pixel-ratio: 2)">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<!-- End for apple -->
+	<!-- Add to Home Screen -->
+	<!--
+    <link rel="stylesheet" href="css/add2home.css">
+    <script type="application/javascript" src="js/add2home.js" charset="utf-8"></script>    
+    <!-- End Add to Home Screen -->
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/colorbox.css">
+	<link rel="stylesheet" href="css/cover.css">
+	<!--<link rel="stylesheet" type="text/css" href="lib/css/iapp-ad01.css" />-->
+	<!-- <script src="https://www.parsecdn.com/js/parse-latest.min.js"></script> -->
+	<!--<script src="/javascripts/parseInit.js"></script>-->
+	<!-- // <script src="http://www.parsecdn.com/js/parse-1.5.0.min.js"></script> -->
+</head>
+
+<body>
+	<!--<div id="loading">iApp 載入中</div>-->
+	<!--<div class="ScreenTop">
+        <img src="lib/img/stamp.png">
+    </div>-->
+	<!-- start page -->
+	<div class="Allpage">
+		<!-- 三明治點選 暫時註解-->
+		<!-- <a href="#" class="menu"><span></span></a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link colorboxlist1" id="pList"><i class="fa fa-calendar-o"></i>得獎名單</a></li>
+                <li style="margin-top: 20px;"><img src="http://chart.apis.google.com/chart?chs=90x90&chl=http://www.iapp-media.net/ievent/&chld=L|0&choe=UTF-8&cht=qr" alt="" class="qr" style="border: 0px solid #fff;">
+                    <a href="http://line.naver.jp/R/msg/text/?http://www.iapp-media.net/ievent" class="line">
+                        <img src="img/lineicon.png" alt="用LINE傳送" style="width: 65px; height: 65px;" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="Allwow">
+            <h1 class="title-1">活動抽獎</h1>
+                <!-- <div class="dineInfo">
+                    <label for="" class="menucolor">主辦人：</label>
+                    <span id="t1" class="contentcolor"></span>
+                    <br>
+                    <label for="" class="menucolor">行動電話：</label>
+                    <span id="t2" class="contentcolor"></span>
+                    <br>
+                    <label for="" class="menucolor">聚餐時間：</label>
+                    <span id="t3" class="contentcolor"></span>
+                    <br>
+                    <label for="" class="menucolor">餐廳名稱：</label>
+                    <span id="t4" class="contentcolor"></span>
+                </div> -->
+		<!-- <div class="pages page2"><img class="wow animated fadeInDown" src="img/p1-Tableware.png" alt=""></div>
+            <div class="pages page3"><img class="wow animated fadeInRight" src="img/p2-japan.png" alt=""></div>
+            <div class="pages page4"><img class="wow animated fadeInLeft" src="img/p2-usa.png" alt=""></div>
+            <div class="pages page5"><img class="wow animated fadeInRight" src="img/p3-taiwan.png" alt=""></div>
+            <div class="pages page6"><img class="wow animated fadeInLeft" src="img/p4-italy.png" alt=""></div>
+            <div class="pages page7"><img class="wow animated fadeInRight" src="img/p5-Dessert.png" alt=""></div> -->
+		<!--            <form action="http://127.0.0.1:8000/saveParticipant" method="post" id="partForm"><div class="pages page8"> -->
+		<!--  <form action="http://www.iapp-media.net:8000/saveParticipant" method="post" id="partForm">
+            <form id="partForm">
+                <div class="pages page8">
+                    <div class="questions wow animated fadeInDown">
+                        <div class="insideW">
+                            <h4 class="menucolor">「參加活動抽獎」</h4>
+                            <div class="inputhe">
+                                <label for="" class="menucolor">發票號碼</label>
+                                <input type="text" id="pNum" name="pNum" class="menuinput" placeholder="ex: AB12345678" maxlength="10" required>
+                            </div>
+                            <div class="inputhe">
+                                <label for="" class="menucolor">姓名</label>
+                                <input type="text" id="pName" name="pName" class="menuinput" required>
+                            </div>
+                            <div class="inputhe">
+                                <label for="" class="menucolor">電話</label>
+                                <input type="tel" id="pPhone" name="pPhone" class="menuinput" placeholder="得獎通知用" maxlength="10" required>
+                            </div>                            <div class="inputhe">
+                                <label for="" class="menucolor">電子郵件</label>
+                                <input type="email" id="pEmail" name="pEmail" class="menuinput" placeholder="得獎通知用" required>
+                            </div>                            
+                            <div class="inputhe">
+                                <label for="" class="menucolor">聯絡地址</label>
+                                <input type="text" id="pAddr" name="pAddr" class="menuinput" placeholder="得獎通知用" required>
+
+        </nav> -->
+		<!-- mobile -->
+		<div class="page-top">
+			<img src="img/top.png" alt="">
+			<img src="img/photo.jpg" alt="">
+		</div>
+		<div class="page-footer">
+			<img src="img/bottom.png" alt="">
+		</div>
+		<div class="page-inside-mobile">
+			<img src="img/word.png" alt="">
+			<div class="inside-close">
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="fixed-page">
+			<div class="fixed-BTNbox animation-6">
+				<div class="menu_active">活動辦法</div>
+				<div>登錄發票</div>
+				<div>注意事項</div>
+				<div class="winning">得獎名單</div>
+			</div>
+			<div class="logo animation-2">
+				<img src="img/logo.png" alt="">
+			</div>
+			<div class="air animation-3"></div>
+			<div class="fixed-bg animation-4"></div>
+		</div>
+		<div class="page_all">
+			<div class="pagenow-index page-1 animation-5">
+				<div class="page-inside">
+					<img src="img/date-word.png" alt="">
+					<div class="gift"></div>
+				</div>
+			</div>
+			<div class="pagenow-index page-2">
+				<div class="page-inside">
+					<form id="partForm" action="api/submit.php" method="POST">
+						<div class="pages page8">
+							<div class="questions animated fadeInDown">
+								<div class="insideW">
+									<h4 class="menucolor-1">參加活動抽獎</h4>
+									<div class="inputhe">
+										<label for="" class="menucolor">發票號碼</label>
+										<input type="text" id="pNum" name="pNum" class="menuinput" placeholder="ex: AB12345678" required>
+										<span id="NumError"></span>
+									</div>
+									<div class="inputhe">
+										<label for="" class="menucolor">姓名</label>
+										<input type="text" id="pName" name="pName" class="menuinput" required>
+										<span id="NameError"></span>
+									</div>
+									<div class="inputhe">
+										<label for="" class="menucolor">電話</label>
+										<input type="tel" id="pPhone" name="pPhone" class="menuinput" required>
+										<span id="PhoneError"></span>
+									</div>
+									<div class="inputhe">
+										<label for="" class="menucolor">電子郵件</label>
+										<input type="email" id="pEmail" name="pEmail" class="menuinput" required>
+										<span id="EmailError"></span>
+									</div>
+									<div class="inputhe">
+										<label for="" class="menucolor">聯絡地址</label>
+										<input type="text" id="pAddr" name="pAddr" class="menuinput" required>
+										<span id="AddrError"></span>
+									</div>
+									<div class="caresend" id="pSend">
+										<img src="img/send.jpg" alt="">
+									</div>
+									<div class="activity">
+										<img src="img/button-1.png" alt="">
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="pagenow-index page-3">
+				<div class="page-inside">
+					<img src="img/note-word.png" alt="">
+				</div>
+			</div>
+			<div class="pagenow-index page-4">
+				<div class="page-inside">
+					<div class="insideW">
+						<h4 class="menucolor-1">得獎名單</h4>
+						<div id="winningList">
+							<div class="listInside">
+								<h3 class="oddColorh3">發票號碼</h3>
+								<h3 class="oddColorh3">得獎姓名</h3>
+								<div class="clear"></div>
+								<h2 style="text-align: left; font-size: 18px; padding: 15px 0">瑞士來回機票2張 1名</h2>
+								<div class="scroll">
+									<p class="oddColorh3">GG52512934</p>
+									<p class="oddColorp">林X兒</p>
+								</div>
+								<h2 style="text-align: left; font-size: 18px; padding: 15px 0">瑞士精美禮盒 10名</h2>
+
+								<div style="height: 100px; overflow-y: auto;">
+									<div class="scroll">
+										<p class="oddColorh3">BG00477343</p>
+										<p class="oddColorp">蕭X原</p>
+									</div>
+									<div class="scroll">
+										<p class="oddColorh3">FZ34992828</p>
+										<p class="oddColorp">林X瑛</p>
+									</div>
+									<div class="scroll">
+										<p class="oddColorh3">EX76569231</p>
+										<p class="oddColorp">張X中</p>
+									</div>
+									<div class="scroll">
+										<p class="oddColorh3">GB59983735</p>
+										<p class="oddColorp">魏X蘋</p>
+									</div>
+									<div class="scroll">
+										<p class="oddColorh3">FE03208266</p>
+										<p class="oddColorp">彭X欣</p>
+									</div>
+									<div class="scroll">
+										<p class="oddColorh3">GB94354208</p>
+										<p class="oddColorp">歐X齊</p>
+									</div>
+									<div class="scroll">
+										<p class="oddColorh3">GB17098552</p>
+										<p class="oddColorp">李X櫻</p>
+									</div>
+									<div class="scroll">
+										<p class="oddColorh3">FY41500931</p>
+										<p class="oddColorp">金X寧</p>
+									</div>
+									<div class="scroll">
+										<p class="oddColorh3">EV27854426</p>
+										<p class="oddColorp">黃X淳</p>
+									</div>
+									<div class="scroll">
+										<p class="oddColorh3">FE00809239</p>
+										<p class="oddColorp">陳X文</p>
+									</div>
+								</div>
+								<div class="clear"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/custom.js"></script>
+	<!-- <script src="js/ievent.js"></script> -->
+	<script src="js/submit.js"></script>
+	<!-- ricola Google Analytics 分析 -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-62535634-13', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<script>
+		document.write('<style>#loading{display:none}</style>');
+	</script>
+</body>
+
+</html>

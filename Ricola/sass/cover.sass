@@ -1,0 +1,470 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@import "../../stylesheets/_mixin.sass"
+
+// 晃動
++keyframes(animation-1) 
+	0% 
+		+transform(scale(1))
+
+	2.92% 
+		+transform(scale(1))
+	
+	3.47% 
+		+transform(scale(1))
+
+	4.58% 
+		+transform(scale(2.061))
+
+	5.69% 
+		+transform(scale(2.361))
+
+	5.76% 
+		+transform(scale(2.32))
+
+	7.41% 
+		+transform(scale(1.99))
+
+	7.51% 
+		+transform(scale(1.961))
+
+	7.88% 
+		+transform(scale(1.771))
+
+	8.68% 
+		+transform(scale(1.408))
+
+	10.03% 
+		+transform(scale(0.982))
+
+	10.85% 
+		+transform(scale(0.822))
+
+	11.53% 
+		+transform(scale(0.732))
+
+	12.22% 
+		+transform(scale(0.672))
+
+	14.18% 
+		+transform(scale(0.612))
+
+	14.37% 
+		+transform(scale(0.612))
+
+	19.23% 
+		+transform(scale(0.737))
+
+	20.01% 
+		+transform(scale(0.763))
+
+	23.05% 
+		+transform(scale(0.856))
+
+	25.75% 
+		+transform(scale(0.923))
+
+	26.94% 
+		+transform(scale(0.947))
+
+	31.58% 
+		+transform(scale(1.009))
+
+	31.73% 
+		+transform(scale(1.01))
+
+	37.32% 
+		+transform(scale(1.027))
+
+	38.15% 
+		+transform(scale(1.029))
+
+	42.35% 
+		+transform(scale(1.022))
+
+	48.9% 
+		+transform(scale(1.007))
+
+	57.77% 
+		+transform(scale(0.998))
+
+	60.47% 
+		+transform(scale(0.998))
+
+	69.36% 
+		+transform(scale(0.999))
+
+	83.61% 
+		+transform(scale(1))
+
+	100% 
+		+transform(scale(1))
+
+// logo 左上
++keyframes(animation-2)
+	0%
+		opacity: 0
+
+	25%
+		opacity: 1
+	30%
+		opacity: 1
+	40%
+		opacity: 1
+	50%
+		opacity: 1
+	60%
+		opacity: 1
+		
+	61%
+		top: 50%
+		left: 50%
+		margin-left: -84px
+		margin-top: -43px 
+
+	100%  
+		top: 2%
+		left: 3%
+		margin-left: 0
+		margin-top: 0 
+
+//air
++keyframes(animation-3)
+	0%
+		+transform(translateX(0%))
+		opacity: 0
+		
+	100%
+		+transform(translateX(-80%))
+		opacity: 1
+
+//動畫結束後
++keyframes(animation-4)
+	0%
+		background-color: #ffba2b
+		
+	100%
+		background-color: transparent
+
+//光箱動畫
++keyframes(animation-5)
+	0%
+		+transform(scale(0))
+		
+	100%
+		+transform(scale(1))
+
+//選單動畫
++keyframes(animation-6)
+	0%
+		right: -540px
+		
+	100%
+		right: 400px
+
+//mobile 活動辦法
++keyframes(animation-7)
+	0%
+		opacity: 0
+		height: 0
+		
+	100%
+		opacity: 1
+		height: 80vh
+
+//晃動
+.animation-1
+	+animation(animation-1 1000ms linear both)
+//logo移動
+.animation-2
+	+animation(animation-2 865ms ease-out both)
+//飛機
+.animation-3
+	+animation(animation-3 865ms 865ms ease-out both)
+//背景顏色消失
+.animation-4
+	+animation(animation-4 865ms 865 * 2ms ease-in both)
+//光箱動畫
+.animation-5
+	+animation(animation-5 .3s (865 * 4.5ms) ease-in both)
+//menu移動
+.animation-6
+	+animation(animation-6 1s (865 * 3ms) ease-out both)
+//menu移動
+.animation-7
+	+animation(animation-7 .3s ease-out both)
+
+
+
+
+.Allpage
+	+RWD(mobile)
+		width: 100%
+		height: 100vh
+		max-width: 100%
+		max-height: 100%
+		min-width: 100%
+		overflow-y: hidden
+	.page8,.page9
+		+RWD(mobile)
+			margin: 0
+
+
+.fixed-page
+	position: absolute
+	width: 100%
+	height: 100%
+	background: url('../img/bg.jpg')
+	background-attachment: fixed
+	background-position: top
+	outline: 5px solid #f00
+	+RWD(mobile)
+		display: none
+
+	.logo
+		position: absolute
+		z-index: 3
+		top: 50%
+		left: 50%
+		margin-left: -84px
+		margin-top: -43px
+
+	.air
+		position: absolute
+		width: 100%
+		height: 100%
+		z-index: 2
+		background: url('../img/roll.png')
+		+background-size(100% 100%)
+		+transform(translateX(-76%))
+
+	.fixed-bg
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: 1
+		background-color: #ffba2b
+
+
+.fixed-BTNbox
+	width: 540px
+	height: 66px
+	position: absolute
+	z-index: 999
+	right: 170px
+	top: 0
+	+box-sizing(border-box)
+	padding: 24px
+
+	div
+		padding: 4px
+		float: left
+		font-size: 20px
+		margin-right: 34px
+		color: rgba(255,255,255,.8)
+		cursor: pointer
+		&:hover,&.menu_active
+			border-bottom: 1px solid rgba(255,255,255,.8)
+
+// 增加一個slider要 + .page_all 寬和page-... 除以個數
+.page_all
+	position: absolute
+	z-index: 1
+	width: 400%
+	height: 100%
+
+	.page-1,.page-2,.page-3,.page-4
+		width: (100% / 4)
+		height: 100%
+		float: left
+		position: relative
+
+
+
+
+.page-inside
+	width: 881px
+	height: 375px
+	position: absolute
+	top: 114px
+	left: 236px
+	background-color: rgba(48,31,3,.5)
+	+box-shadow(0 0 3px 1px rgba(0, 0, 0, .5))
+	text-align: center
+	+box-sizing(border-box)
+	padding: 12px
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+	.gift
+		width: 239px
+		height: 145px
+		// outline: 1px solid #f00
+		margin: 50px 0 60px 192px
+		z-index: 999
+		position: absolute
+		background-image: url("../img/S-img.png")
+		+background-size(100%)
+		&:hover
+			margin-bottom: 10px
+			background-image: url("../img/B-img.jpg")
+			+transform(scale(2.25))
+			+transition(all 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94))
+		img
+			width: 100%
+
+// list
+.clear
+	clear: both
+.page-4
+	// *
+	// 	outline: 1px solid #f00
+	.insideW
+		height: 350px
+	.listInside
+		h3
+			+box-sizing(border-box)
+			float: left
+			width: 50%
+			font-size: 20px
+			padding: 6px
+			border-bottom: 1px solid rgba(255,255,255,.5)
+		.scroll
+			overflow: auto
+			width: 100%
+			// height: 253px
+			p
+				+box-sizing(border-box)
+				float: left
+				width: 50%
+				padding: 6px
+				border-bottom: 1px solid rgba(255,255,255,.5)
+
+//mobile
+.page-top,.page-footer
+	display: none
+	+RWD(mobile)
+		display: block
+		width: 100%
+		img
+			width: 100%
+.page-top
+	+RWD(mobile)
+		img
+			&:nth-child(1)
+				height: 20vh
+			&:nth-child(2)
+				+RWD(mobile)
+					margin-top: -3px
+
+.page-footer
+	+RWD(mobile)
+		position: fixed
+		bottom: 0
+
+.page_all
+	+RWD(mobile)
+		position: static
+		width: 100%
+		max-width: 100%
+	.page-1,.page-3,.page-4
+		+RWD(mobile)
+			display: none
+			.page-inside
+				display: none
+	.page-2
+		+RWD(mobile)
+			width: 100%
+			position: absolute
+			top: 21vh
+			right: 0
+			left: 0
+			margin: auto
+			height: 388px
+
+
+		.page-inside
+			+RWD(mobile)
+				width: 100%
+				position: static
+				background-color: transparent
+				+box-shadow(none)
+				padding: 0
+				height: auto
+
+		.insideW
+			+RWD(mobile)
+				width: 90%
+		.menucolor
+			+RWD(mobile)
+				font-size: 17px
+		.menucolor-1
+			+RWD(mobile)
+				font-weight: bold
+
+.caresend
+	+RWD(mobile)
+		float: right
+		margin-right: 33px
+.activity
+	display: none
+	+RWD(mobile)
+		display: block
+		float: left
+		width: 100px
+		margin-left: 33px
+		margin-top: 3px
+		img
+			width: 100%
+
+.page-inside-mobile
+	display: none
+	+RWD(mobile)
+		-webkit-overflow-scrolling: touch
+		background-color: #005041
+		display: block
+		width: 100%
+		height: 0
+		overflow: auto
+		position: fixed
+		top: 20vh
+		z-index: 1
+		opacity: 0
+		img
+			width: 100%
+		.inside-close
+			+RWD(mobile)
+				position: absolute
+				top: 0
+				right: 0
+				width: 30px
+				height: 30px
+				+border-radius(50%)
+				border: 1px solid #fff
+				span
+					width: 90%
+					height: 1px
+					position: absolute
+					top: 0
+					right: 0
+					bottom: 0
+					left: 0
+					margin: auto
+					background-color: #FFF
+					&:nth-child(1)
+						+transform(rotate(45deg))
+					&:nth-child(2)
+						+transform(rotate(-45deg))
+
+
+
+
+
+
+
+
+	
+		
+
+
+

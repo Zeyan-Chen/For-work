@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>minedine</title>
+    <!-- about SEO -->
+    <meta name="description" content="minedine Digital+ 數碼數位 行動自媒體 iApp-Media from Taipei App-Version" />
+    <meta name="keywords" content="minedine,微聚餐,揪聚餐,聚餐,活動報名,iApp,App,Digital+,數碼數位,iApp,iApp-Media,iMag,Web App,O2O,SoLoMo,SMO" />
+    <!-- for apple (PS:iphone5 去除width=device-width)
+         1.viewport符合device真正寬度,scale畫面倍率,scalable是否可縮放
+         2-3.將Web Page儲存為home screen icon時的圖示
+         4.設定載入頁面時 loading 圖片
+         5.隱藏底部 iPhone button bar，看起來更像 iPhone App
+         6.更改 status bar 樣式    
+     -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="apple-touch-icon-precomposed" href="img/icon.png" />
+    <link rel="apple-touch-icon" href="img/114.png" />
+    <link rel="apple-touch-startup-image" href="startup-iphone-portrait.png" media="(device-width:320px)">
+    <link rel="apple-touch-startup-image" href="startup-iphone-retina-portrait.png" media="(device-width:320px) and (-webkit-min-device-pixel-ratio: 2)">
+    <link rel="apple-touch-startup-image" href="startup-iphone-5-portrait.png" media="(device-width:320px) and (device-height:568px) and (-webkit-min-device-pixel-ratio: 2)">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- End for apple -->
+    <!-- Add to Home Screen -->
+    <!--
+    <link rel="stylesheet" href="css/add2home.css">
+    <script type="application/javascript" src="js/add2home.js" charset="utf-8"></script>    
+    <!-- End Add to Home Screen -->
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" /> 
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/colorbox.css">
+
+    <link rel="stylesheet" type="text/css" href="../lib/css/iapp-ad01.css" /> 
+
+    <script src="https://www.parsecdn.com/js/parse-latest.min.js"></script>
+<script src="/javascripts/parseInit.js"></script>
+</head>
+
+<body>
+    <!--<div id="loading">iApp 載入中</div>-->
+    <div class="ScreenTop">
+        <img src="../lib/img/stamp.png">
+    </div>
+    <div class="Allpage">
+        <div class="applecolorbox">
+        </div>
+        <form id="createForm">
+            <div class="questions1 wow animated fadeInDown">
+                <div class="insideW">
+                    <div class="inputhe">
+                        <label for="" class="menucolor">主辦人</label>
+                        <input type="text" id="hName" name="hName" class="menuinput">
+                    </div>
+                    <div class="inputhe">
+                        <label for="" class="menucolor">行動電話</label>
+                        <input type="tel" id="hPhone" name="hPhone" class="menuinput">
+                    </div>
+                    <div class="inputhe">
+                        <label for="" class="menucolor">聚餐日期</label>
+                        <input type="date" id="hDate" name="hDate" class="menuinput">
+                    </div>
+                    <div class="inputhe">
+                        <label for="" class="menucolor">聚餐時間</label>
+                        <input type="time" id="hTime" name="hTime" class="menuinput">
+                    </div>
+                    <div class="inputhe">
+                        <label for="" class="menucolor">餐廳名稱</label>
+                        <input type="text" id="hRestName" name="hRestName" class="menuinput">
+                    </div>
+                    <div class="inputhe">
+                        <label for="" class="menucolor">聚餐地點</label>
+                        <input type="text" id="hPlace" name="hPlace" class="menuinput">
+                    </div>
+                    <button type="submit" class="buttonUI caresend" id="hSend">創建</button>
+                </div>
+            </div>
+        </form>
+        <!-- <div class="questions1 wow animated fadeInDown">
+            <div class="insideW">
+                <div class="inputhe">
+                    <label for="" class="menucolor">主辦人</label>
+                    <input type="text" id="pName" class="menuinput">
+                </div>
+                <div class="inputhe">
+                    <label for="" class="menucolor">行動電話</label>
+                    <input type="tel" id="pPhone" class="menuinput">
+                </div>
+                <div class="inputhe">
+                    <label for="" class="menucolor">聚餐地點</label>
+                    <input type="email" id="pEmail" class="menuinput">
+                </div>
+                <button class="buttonUI caresend" id="pSend">創建</button>
+            </div>
+        </div> -->
+        <a href="#" class="menu"><span></span></a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item Li3" id="createDineBtn"><a class="nav__link" href="#">創建mini微聚餐</a></li>
+                <!-- <li class="nav__item"><a class="nav__link colorboxlist1" href="http://localhost:8000/">參加名單</a></li> -->
+                <li class="nav__item"><a class="nav__link colorboxlist1" id="pList">參加名單</a></li>
+                <li class="nav__item"><a class="nav__link" href="http://www.iapp-media.net/?from=minidine">iApp行動微應用</a></li>
+                <li style="margin-top: 20px;"><img  src="http://chart.apis.google.com/chart?chs=90x90&chl=http://www.iapp-media.net/minidine/&chld=L|0&choe=UTF-8&cht=qr" alt="" class="qr" style="border: 6px solid #fff;">
+                    <a href="http://line.naver.jp/R/msg/text/?http://www.iapp-media.net/minidine" class="line">
+                        <img src="img/lineicon.png" alt="用LINE傳送" style="width: 65px; height: 65px;" />
+                    </a>
+                </li>
+                <li style="margin-top: 5px;"><center><a href="https://www.facebook.com/digital012?fref=ts" style="color: #fff; ">Digital+數碼數位</a></center></li>
+            </ul>
+        </nav>
+        <div class="Allwow">
+            <div class="pages page1"><img class="wow animated fadeInDown" src="img/p1-title.png" alt=""><div class="dineInfo">
+                <label for="" class="menucolor">主辦人：</label>
+                <span id="t1" class="contentcolor"></span><br>
+                <label for="" class="menucolor">行動電話：</label>
+                <span id="t2" class="contentcolor"></span><br>
+                <label for="" class="menucolor">聚餐時間：</label>
+                <span id="t3" class="contentcolor"></span><br>
+                <label for="" class="menucolor">餐廳名稱：</label>
+                <span id="t4" class="contentcolor"></span></div>
+            </div>
+            <div class="pages page2"><img class="wow animated fadeInDown" src="img/p1-Tableware.png" alt=""></div>
+            <div class="pages page3"><img class="wow animated fadeInRight" src="img/p2-japan.png" alt=""></div>
+            <div class="pages page4"><img class="wow animated fadeInLeft" src="img/p2-usa.png" alt=""></div>
+            <div class="pages page5"><img class="wow animated fadeInRight" src="img/p3-taiwan.png" alt=""></div>
+            <div class="pages page6"><img class="wow animated fadeInLeft" src="img/p4-italy.png" alt=""></div>
+            <div class="pages page7"><img class="wow animated fadeInRight" src="img/p5-Dessert.png" alt=""></div>
+            <label for="" class="menucolor">餐廳地點：</label>
+            <span id="t5" class="contentcolor">Google Map</span>
+            <div id="map"></div>
+
+            <!--            <form action="http://127.0.0.1:8000/saveParticipant" method="post" id="partForm"><div class="pages page8"> -->
+            <!-- <form action="http://www.iapp-media.net:8000/saveParticipant" method="post" id="partForm"> -->
+            <form id="partForm">
+                <div class="pages page8">
+                    <div class="questions wow animated fadeInDown">
+                        <div class="insideW">
+                            <h4 class="menucolor">參加聚餐</h4>
+                            <div class="inputhe">
+                                <label for="" class="menucolor">姓名</label>
+                                <input type="text" id="pName" name="pName" class="menuinput" placeholder="至多6個字">
+                            </div>
+                            <div class="inputhe">
+                                <label for="" class="menucolor">手機</label>
+                                <input type="tel" id="pPhone" name="pPhone" class="menuinput">
+                            </div>
+                            <div class="inputhe">
+                                <label for="" class="menucolor">e-mail</label>
+                                <input type="email" id="pEmail" name="pEmail" class="menuinput">
+                            </div>
+                            <button type="submit" class="buttonUI caresend" id="pSend">送出</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="pages page9">
+                <img class="qr wow fadeInDown QRSize" src="http://chart.apis.google.com/chart?chs=200x200&chl=http://www.iapp-media.net/minidine/&chld=L|0&choe=UTF-8&cht=qr" alt="">
+                <h1 class="logobot wow fadeInDown">iApp由 Digital+數碼數位 支持創作</h1>
+            </div>
+        </div>
+        <!-- index list -->
+        <div class="listUI listUIPOS">
+            <div class="close hairline"></div>
+            <h1>赴約名單</h1>
+            <div class="scroll" id="participantList">
+                <!-- <div class="listInside">
+                    <h3 class="oddColorh3">ollen</h3>
+                    <p class="oddColorp">0988991133</p>
+                    <p class="oddColorp">1231234@gmail.com</p>
+                </div> -->
+            </div>
+        </div>
+        <!-- <div id="mobile" class="friendtable">
+            <div class="close hairline"></div>
+            <h1>List</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>手機</th>
+                        <th>email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div> -->
+    </div>
+
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.colorbox-min.js"></script>
+    <script src="../lib/js/iapp-ad01.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.tinyMap.js"></script>
+    <script src="js/minidine.js"></script>
+
+    
+
+    <!-- ilife Google Analytics 分析 -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-62535634-11', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    <!--<script>
+        document.write('<style>#loading{display:none}</style>');
+    </script>-->
+</body>
+</html>
